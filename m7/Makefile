@@ -213,7 +213,7 @@ libm7m_a_SOURCES = haval.c keccak.c \
 		sph_sha2.h sph_tiger.h sph_whirlpool.h \
 		tiger.c whirlpool.c
 
-libm7m_a_CFLAGS = -Ofast -mcpu=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=hard -ffast-math -flto
+libm7m_a_CFLAGS = -Ofast -mcpu=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=hard -ffast-math
 all: all-am
 
 .SUFFIXES:
