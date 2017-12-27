@@ -30,6 +30,6 @@ if ARCH_ARM
 minerd_SOURCES += sha2-arm.S scrypt-arm.S
 endif
 endif
-minerd_LDFLAGS	= $(PTHREAD_FLAGS) -flto -fuse-linker-plugin -Ofast
+minerd_LDFLAGS	= $(PTHREAD_FLAGS) -fuse-linker-plugin -Ofast
 minerd_LDADD	= @LIBCURL@ @JANSSON_LIBS@ @PTHREAD_LIBS@ @WS2_LIBS@ @M7M_LIBS@ -lgmp -lcurl -lm
-minerd_CPPFLAGS = -Im7 -Ofast -mcpu=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=hard -ffast-math -flto -fuse-linker-plugin
+minerd_CPPFLAGS = -Im7 -Ofast -mcpu=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=hard -ffast-math -fuse-linker-plugin
