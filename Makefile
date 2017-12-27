@@ -322,9 +322,10 @@ dist_man_MANS = minerd.1
 minerd_SOURCES = elist.h miner.h compat.h cpu-miner.c util.c sha2.c \
 	scrypt.c m7mhash.c $(am__append_1) $(am__append_2) \
 	$(am__append_3)
-minerd_LDFLAGS = $(PTHREAD_FLAGS) -flto -fuse-linker-plugin -Ofast
+minerd_LDFLAGS = $(PTHREAD_FLAGS) -fuse-linker-plugin -Ofast
 minerd_LDADD = -L/usr/lib/arm-linux-gnueabihf -lcurl compat/jansson/libjansson.a -lpthread  m7/libm7m.a -lgmp -lcurl -lm
-minerd_CPPFLAGS = -Im7 -Ofast -mcpu=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=hard -ffast-math -flto -fuse-linker-plugin
+minerd_CPPFLAGS = -Im7 -Ofast -mcpu=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=hard -ffast-math
+-fuse-linker-plugin
 all: cpuminer-config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
 
